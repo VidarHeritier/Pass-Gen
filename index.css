@@ -1,0 +1,64 @@
+body {
+  background-image: url(Matrix-blurred.jpg);
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vh;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bolder;
+}
+h1,
+h2 {
+  border-radius: 30px;
+  text-shadow: 3px 3px 40px rgb(115, 246, 135);
+}
+h1 {
+  font-size: 3.5rem;
+  margin-top: 10%;
+}
+h2 {
+  font-size: 2rem;
+  margin-top: -40px;
+}
+button {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  padding: 15px 30px 15px 30px;
+  border: none;
+  border-radius: 15px;
+  background-color: black;
+  box-shadow: 0px 0px 40px rgb(115, 246, 135);
+  margin-top: 10%;
+}
+.passwords {
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+}
+#pass1 {
+  background-color: blue;
+  box-shadow: inset 0px 10px 30px rgb(181, 181, 222);
+  border-radius: 50px;
+  padding: 20px 70px;
+  margin-right: 5%;
+}
+#pass1:empty:not(:focus)::before {
+  content: attr(data-placeholder);
+}
+#pass2 {
+  background-color: red;
+  box-shadow: inset 0px 10px 30px rgb(219, 173, 173);
+  border-radius: 50px;
+  padding: 20px 70px;
+  margin-left: 5%;
+}
+#pass2:empty:not(:focus)::before {
+  content: attr(data-placeholder);
+}
