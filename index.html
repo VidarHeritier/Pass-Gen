@@ -12,15 +12,21 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   </head>
   <body>
     <h1>Password Generator 2.0</h1>
     <h2>Be safe. Use protection.</h2>
     <button id="generate">Follow the white rabbit</button>
     <div class="passwords">
-      <p id="pass1" data-placeholder="blue pill"></p>
-      <p id="pass2" data-placeholder="red pill"></p>
+      <div id="pass1"></div>
+      <p id="copyPass1" data-placeholder="blue pill"></p>
+      <div id="pass2"></div>
+      <p id="copyPass2" data-placeholder="red pill"></p>
     </div>
+    <div id="message" style="display: none">Password copied!</div>
     <script src="index.js"></script>
   </body>
 </html>
