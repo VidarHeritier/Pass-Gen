@@ -122,8 +122,10 @@ function generatePass1() {
 }
 
 function myFunction() {
-  passwordEl1.textContent = password1;
-  passwordEl2.textContent = password2;
+  setTimeout(() => {
+    passwordEl1.textContent = password1;
+    passwordEl2.textContent = password2;
+  }, 800);
 }
 
 function copyToClipboard(text, message) {
@@ -139,4 +141,15 @@ function copyToClipboard(text, message) {
     .catch((err) => {
       console.error("Could not copy text: ", err);
     });
+}
+function playAnim() {
+  const matrixVid = document.querySelector(".matrix");
+  matrixVid.play();
+  setTimeout(() => {
+    pauseVid();
+  }, 800);
+}
+function pauseVid() {
+  const matrixVid = document.querySelector(".matrix");
+  matrixVid.pause();
 }
