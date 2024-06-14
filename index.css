@@ -11,11 +11,13 @@ body {
   margin: 0 auto;
   font-family: "Orbitron", sans-serif;
   font-weight: bolder;
+  overflow: hidden;
 }
 h1,
 h2 {
   border-radius: 30px;
   text-shadow: 3px 3px 40px rgb(115, 246, 135);
+  filter: drop-shadow(0.2rem 0.2rem black);
 }
 h1 {
   font-size: 3.5rem;
@@ -36,29 +38,51 @@ button {
   background-color: black;
   box-shadow: 0px 0px 40px rgb(115, 246, 135);
   margin-top: 10%;
+  transition: scaleX 0.3s ease-in-out;
+  transition: brightness 0.3s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  transform: scaleX(1.01) scaleY(0.97);
+}
+button:active {
+  filter: brightness(200%);
 }
 .passwords {
   display: flex;
   justify-content: center;
+  padding-top: 5rem;
   margin: 10%;
 }
-#pass1 {
+#copyPass1 {
   background-color: blue;
   box-shadow: inset 0px 10px 30px rgb(181, 181, 222);
   border-radius: 50px;
   padding: 20px 70px;
   margin-right: 5%;
+  min-width: 12rem;
+  font-size: 1rem;
+  transition: hue-rotate 0.4s ease-in;
 }
-#pass1:empty:not(:focus)::before {
+#copyPass1:empty:not(:focus)::before {
   content: attr(data-placeholder);
 }
-#pass2 {
+#copyPass1:active {
+  filter: hue-rotate(240deg);
+}
+#copyPass2 {
   background-color: red;
   box-shadow: inset 0px 10px 30px rgb(219, 173, 173);
   border-radius: 50px;
   padding: 20px 70px;
   margin-left: 5%;
+  min-width: 12rem;
+  font-size: 1rem;
+  transition: hue-rotate 0.4s ease-in;
 }
-#pass2:empty:not(:focus)::before {
+#copyPass2:empty:not(:focus)::before {
   content: attr(data-placeholder);
+}
+#copyPass2:active {
+  filter: hue-rotate(90deg);
 }
