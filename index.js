@@ -92,12 +92,18 @@ const characters = [
   "/",
 ];
 
-let passwordEl1 = document.getElementById("pass1");
-let passwordEl2 = document.getElementById("pass2");
+let passwordEl1 = document.getElementById("copyPass1");
+let passwordEl2 = document.getElementById("copyPass2");
 let password1 = "";
 let password2 = "";
 
 document.getElementById("generate").addEventListener("click", generatePass1);
+document
+  .getElementById("copyPass1")
+  .addEventListener("click", () => copyToClipboard(password1, "message"));
+document
+  .getElementById("copyPass2")
+  .addEventListener("click", () => copyToClipboard(password2, "message"));
 
 function generatePass1() {
   password1 = "";
@@ -118,4 +124,19 @@ function generatePass1() {
 function myFunction() {
   passwordEl1.textContent = password1;
   passwordEl2.textContent = password2;
+}
+
+function copyToClipboard(text, message) {
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      let messageEl = document.getElementById(message);
+      messageEl.style.display = "block";
+      setTimeout(() => {
+        messageEl.style.display = "none";
+      }, 1500);
+    })
+    .catch((err) => {
+      console.error("Could not copy text: ", err);
+    });
 }
