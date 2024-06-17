@@ -35,7 +35,7 @@ h2 {
   font-size: 2rem;
   margin-top: -40px;
 }
-button {
+#generate {
   font-family: "Orbitron", sans-serif;
   font-size: 2rem;
   font-weight: bolder;
@@ -49,11 +49,11 @@ button {
   transition: scaleX 0.3s ease-in-out;
   transition: brightness 0.3s ease-in-out;
 }
-button:hover {
+#generate:hover {
   cursor: pointer;
   transform: scaleX(1.01) scaleY(0.97);
 }
-button:active {
+#generate:active {
   filter: brightness(200%);
 }
 .passwords {
@@ -62,36 +62,73 @@ button:active {
   padding-top: 5rem;
   margin: 10%;
 }
-#copyPass1 {
+#copyPass1:disabled {
   background-color: blue;
   box-shadow: inset 0px 10px 30px rgb(181, 181, 222);
+  color: whitesmoke;
+  font-family: "Orbitron", sans-serif;
   border-radius: 50px;
   padding: 20px 70px;
   margin-right: 5%;
-  min-width: 12rem;
+  height: 5rem;
+  width: 22rem;
   font-size: 1rem;
   transition: hue-rotate 0.4s ease-in;
 }
 #copyPass1:empty:not(:focus)::before {
   content: attr(data-placeholder);
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+  font-family: "Orbitron", sans-serif;
 }
-#copyPass1:active {
-  filter: hue-rotate(240deg);
+.newPass1:enabled {
+  background-color: blue;
+  color: whitesmoke;
+  box-shadow: inset 0px 10px 30px rgb(181, 181, 222);
+  border-radius: 50px;
+  padding: 20px 70px;
+  margin-right: 5%;
+  height: 5rem;
+  width: 22rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  transition: hue-rotate 0.4s ease-in;
 }
-#copyPass2 {
+#copyPass2:disabled {
   background-color: red;
+  color: whitesmoke;
+  font-family: "Orbitron", sans-serif;
   box-shadow: inset 0px 10px 30px rgb(219, 173, 173);
   border-radius: 50px;
   padding: 20px 70px;
   margin-left: 5%;
-  min-width: 12rem;
+  width: 22rem;
   font-size: 1rem;
-  transition: hue-rotate 0.4s ease-in;
+}
+.newPass1:active {
+  filter: hue-rotate(240deg);
 }
 #copyPass2:empty:not(:focus)::before {
   content: attr(data-placeholder);
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+  font-family: "Orbitron", sans-serif;
 }
-#copyPass2:active {
+.newPass2:enabled {
+  background-color: red;
+  color: whitesmoke;
+  box-shadow: inset 0px 10px 30px rgb(219, 173, 173);
+  border-radius: 50px;
+  padding: 20px 70px;
+  margin-left: 5%;
+  width: 22rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  transition: hue-rotate 0.4s ease-in;
+}
+.newPass2:active {
   filter: hue-rotate(90deg);
 }
 #message {
