@@ -108,6 +108,8 @@ document
 function generatePass1() {
   password1 = "";
   let randomNumber = "";
+  passwordEl1.disabled = true;
+  passwordEl2.disabled = true;
   for (let i = 0; i < 15; i++) {
     randomNumber = Math.floor(Math.random() * characters.length);
     password1 += characters[randomNumber];
@@ -125,10 +127,15 @@ function myFunction() {
   setTimeout(() => {
     passwordEl1.textContent = password1;
     passwordEl2.textContent = password2;
+    passwordEl1.disabled = false;
+    passwordEl2.disabled = false;
+    passwordEl1.classList.add("newPass1");
+    passwordEl2.classList.add("newPass2");
   }, 800);
 }
 
 function copyToClipboard(text, message) {
+  if (text === "") return;
   navigator.clipboard
     .writeText(text)
     .then(() => {
@@ -142,6 +149,7 @@ function copyToClipboard(text, message) {
       console.error("Could not copy text: ", err);
     });
 }
+
 function playAnim() {
   const matrixVid = document.querySelector(".matrix");
   matrixVid.play();
@@ -149,6 +157,7 @@ function playAnim() {
     pauseVid();
   }, 800);
 }
+
 function pauseVid() {
   const matrixVid = document.querySelector(".matrix");
   matrixVid.pause();
