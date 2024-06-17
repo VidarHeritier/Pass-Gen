@@ -97,13 +97,21 @@ let passwordEl2 = document.getElementById("copyPass2");
 let password1 = "";
 let password2 = "";
 
-document.getElementById("generate").addEventListener("click", generatePass1);
+document
+  .getElementById("generate")
+  .addEventListener("click", generatePass1, playAnim);
 document
   .getElementById("copyPass1")
   .addEventListener("click", () => copyToClipboard(password1, "message"));
 document
   .getElementById("copyPass2")
   .addEventListener("click", () => copyToClipboard(password2, "message"));
+document.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    generatePass1();
+    playAnim();
+  }
+});
 
 function generatePass1() {
   password1 = "";
