@@ -94,3 +94,8 @@ button:active {
 #copyPass2:active {
   filter: hue-rotate(90deg);
 }
+#message {
+  font-size: 1.7rem;
+  text-shadow: 3px 3px 40px rgb(115, 246, 135);
+  filter: drop-shadow(0.2rem 0.2rem black);
+}
