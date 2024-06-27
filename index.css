@@ -155,6 +155,7 @@ h2 {
   60% {
     visibility: hidden;
   }
+
   80% {
     visibility: visible;
     scale: 1.2;
