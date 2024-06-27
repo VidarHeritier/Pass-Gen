@@ -161,6 +161,7 @@ function copyToClipboard(text, message) {
 function playAnim() {
   const matrixVid = document.querySelector(".matrix");
   matrixVid.play();
+  genAnim();
   setTimeout(() => {
     pauseVid();
   }, 800);
@@ -169,4 +170,12 @@ function playAnim() {
 function pauseVid() {
   const matrixVid = document.querySelector(".matrix");
   matrixVid.pause();
+}
+
+function genAnim() {
+  const generating = document.querySelector(".generating");
+
+  generating.style.animation = "none";
+  generating.offsetWidth;
+  generating.style.animation = "generatingAnim .8s ease-in";
 }
