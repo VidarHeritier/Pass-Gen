@@ -59,7 +59,6 @@ h2 {
 .passwords {
   display: flex;
   justify-content: center;
-  padding-top: 5rem;
   margin: 10%;
 }
 #copyPass1:disabled {
@@ -135,4 +134,32 @@ h2 {
   font-size: 1.7rem;
   text-shadow: 3px 3px 40px rgb(115, 246, 135);
   filter: drop-shadow(0.2rem 0.2rem black);
+}
+.generating {
+  margin-top: 4rem;
+  color: #3ad54f;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  visibility: hidden;
+  font-size: 3rem;
+}
+@keyframes generatingAnim {
+  0% {
+    visibility: visible;
+  }
+  20% {
+    scale: 1.2;
+  }
+  40% {
+    scale: 1;
+  }
+  60% {
+    visibility: hidden;
+  }
+  80% {
+    visibility: visible;
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
