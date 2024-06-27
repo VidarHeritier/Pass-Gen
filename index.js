@@ -174,7 +174,6 @@ function pauseVid() {
 
 function genAnim() {
   const generating = document.querySelector(".generating");
-
   generating.style.animation = "none";
   generating.offsetWidth;
   generating.style.animation = "generatingAnim .8s ease-in";
