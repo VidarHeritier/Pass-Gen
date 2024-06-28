@@ -48,17 +48,22 @@
       width="100%"
       height="100%"
     ></video>
-    <h1>Password Generator 2.0</h1>
-    <h2>Be safe. Use protection.</h2>
-    <button id="generate" onclick="playAnim()">Follow the white rabbit</button>
-    <h3 class="generating">Generating</h3>
-    <div class="passwords">
-      <div id="pass1"></div>
-      <button id="copyPass1" data-placeholder="blue pill" disabled></button>
-      <div id="pass2"></div>
-      <button id="copyPass2" data-placeholder="red pill" disabled></button>
+    <div class="move">
+      <h1>Password Generator 2.0</h1>
+      <h2>Be safe. Use protection.</h2>
+      <button id="generate" onclick="playAnim()">
+        Follow the white rabbit
+      </button>
+      <h3 class="generating">Generating</h3>
+      <div class="passwords">
+        <div id="pass1"></div>
+        <button id="copyPass1" data-placeholder="blue pill" disabled></button>
+        <div id="pass2"></div>
+        <button id="copyPass2" data-placeholder="red pill" disabled></button>
+      </div>
+      <div id="message" style="display: none">Password copied!</div>
     </div>
-    <div id="message" style="display: none">Password copied!</div>
+
     <script src="index.js"></script>
   </body>
 </html>
