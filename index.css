@@ -1,5 +1,5 @@
 body {
-  /* background-image: url(MatrixAnim.gif); */
+  background-color: black;
   box-sizing: border-box;
   background-size: cover;
   background-position: center;
@@ -16,9 +16,10 @@ body {
 }
 video {
   position: fixed;
-  top: 0%;
-  left: 0%;
-  scale: 1.03;
+  top: -70%;
+  left: -40%;
+  min-width: 200%;
+  min-height: 200%;
   z-index: -5;
 }
 h1,
@@ -33,7 +34,7 @@ h1 {
 }
 h2 {
   font-size: 2rem;
-  margin-top: -40px;
+  margin-top: -4%;
 }
 #generate {
   font-family: "Orbitron", sans-serif;
@@ -102,6 +103,7 @@ h2 {
   border-radius: 50px;
   padding: 20px 70px;
   margin-left: 5%;
+  height: 5rem;
   width: 22rem;
   font-size: 1rem;
 }
@@ -121,6 +123,7 @@ h2 {
   border-radius: 50px;
   padding: 20px 70px;
   margin-left: 5%;
+  height: 5rem;
   width: 22rem;
   font-size: 1rem;
   cursor: pointer;
@@ -162,5 +165,56 @@ h2 {
   }
   100% {
     scale: 1;
+  }
+}
+/**Media Qs*/
+@media screen and (orientation: portrait) {
+  html {
+    overflow: hidden;
+  }
+  video.matrix {
+    /* top: -11%; */
+    transform: scaleY(3.6);
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1rem;
+    margin-top: -0.4rem;
+  }
+  #generate {
+    scale: 0.6;
+  }
+  .passwords {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scale: 0.8;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+  }
+  #copyPass1:disabled {
+    margin-right: 0;
+  }
+  #copyPass2:disabled {
+    margin-left: 0;
+  }
+  .newPass1:enabled {
+    margin-right: 0;
+  }
+  .newPass2:enabled {
+    margin-left: 0;
+  }
+  #message {
+    scale: 0.7;
+  }
+  .generating {
+    font-size: 1.3rem;
+  }
+  .move {
+    transform: translateY(-15%);
   }
 }
