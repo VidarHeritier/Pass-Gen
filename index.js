@@ -97,6 +97,8 @@ let passwordEl2 = document.getElementById("copyPass2");
 let password1 = "";
 let password2 = "";
 
+centerOnGenerateButton();
+
 document
   .getElementById("generate")
   .addEventListener("click", generatePass1, playAnim);
@@ -177,4 +179,10 @@ function genAnim() {
   generating.style.animation = "none";
   generating.offsetWidth;
   generating.style.animation = "generatingAnim .8s ease-in";
+}
+function centerOnGenerateButton() {
+  const generateButton = document.getElementById("generate");
+  generateButton.scrollIntoView({ behavior: "smooth", block: "center" });
+  document.body.style.transform = "translateX(-7%)";
+  document.body.style.overflow = "hidden";
 }
